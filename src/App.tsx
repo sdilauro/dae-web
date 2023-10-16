@@ -8,8 +8,8 @@ import {
   Text
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { DaoLogo } from "./components/DaoLogo"
-import { FoundationLogo } from "./components/FoundationLogo"
+import { DaoIcon } from "./components/DaoIcon"
+import { FoundationIcon } from "./components/FoundationIcon"
 import { Footer } from "./components/Footer"
 
 export const App = () => (
@@ -23,20 +23,20 @@ export const App = () => (
           <Heading color={"#ff2d55"} fontFamily={"monospace"} textAlign={'left'}>Decentraland Alternative Explorers</Heading>
           <Text textAlign={'left'}>Expanding Decentraland Explorers: Mobile & VR in Godot and Desktop in Bevy</Text>
         </Box>
-        <Box display={"flex"} alignItems={"center"} minW={136}>
+        <Box display={"flex"} alignItems={"center"} marginLeft={'1rem'} minW={136}>
           <Link
               href="https://decentraland.org"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FoundationLogo h="60px" aspectRatio={1}/>
+              <FoundationIcon h="60px" aspectRatio={1}/>
             </Link>
             <Link
               href="https://dao.decentraland.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DaoLogo h="76px" aspectRatio={1} />
+              <DaoIcon h="76px" aspectRatio={1} />
             </Link>
         </Box>
       </Box>
@@ -45,9 +45,9 @@ export const App = () => (
         <Image margin={'auto'} my={"3rem"} src='gibbresh.png' fallbackSrc='https://via.placeholder.com/850x350' />
         <Text>After the goals achieved in the Protocol Squad we continue contributing to the Decentraland metaverse through the development of mobile clients with the Godot engine, oriented to Android and iOS platforms, with potential publication in App Store and Play Store and through the continuation of the development of the desktop client of the Bevy engine.</Text>
         <Text>On the other hand, we contributed to the Decentraland documentation by working in collaboration with the Foundation. </Text>
-        <Text>For more info, you can see the 
+        <Text>For more info, you can see the{' '}
           <Link
-            ml={"0.4rem"}
+            
             href="https://dao.decentraland.org/"
             target="_blank"
             rel="noopener noreferrer"

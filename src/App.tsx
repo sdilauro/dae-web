@@ -43,7 +43,7 @@ export const App = () => (
       
       <Box >
         <Image margin={'auto'} my={"3rem"} src='gibbresh.png' fallbackSrc='https://via.placeholder.com/850x350' />
-        <Text>After the goals achieved in the Protocol Squadron we continue contributing to the Decentraland metaverse through the development of mobile clients with the Godot engine, oriented to Android and iOS platforms, with potential publication in App Store and Play Store and through the continuation of the development of the desktop client of the Bevy engine.</Text>
+        <Text>After the goals achieved in the Protocol Squad we continue contributing to the Decentraland metaverse through the development of mobile clients with the Godot engine, oriented to Android and iOS platforms, with potential publication in App Store and Play Store and through the continuation of the development of the desktop client of the Bevy engine.</Text>
         <Text>On the other hand, we contributed to the Decentraland documentation by working in collaboration with the Foundation. </Text>
         <Text>For more info, you can see the 
           <Link

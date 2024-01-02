@@ -3,17 +3,15 @@ import {
   ChakraProvider,
   Heading,
   Link,
-  theme,
-  Image,
-  Text
+  Text,
+  theme
 } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { DaoIcon } from "./components/DaoIcon"
-import { FoundationIcon } from "./components/FoundationIcon"
-import { Footer } from "./components/Footer"
-import { useEffect, useState } from "react"
-import dclexplorer from "./assets/images/dclexplorer-web-image-1.png"
 import { DclExplorerImage } from "./components/DclExplorerImage"
+import { Footer } from "./components/Footer"
+import { FoundationIcon } from "./components/FoundationIcon"
 
 
 

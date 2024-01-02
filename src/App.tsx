@@ -12,6 +12,8 @@ import { DaoIcon } from "./components/DaoIcon"
 import { FoundationIcon } from "./components/FoundationIcon"
 import { Footer } from "./components/Footer"
 import { useEffect, useState } from "react"
+import dclexplorer from "./assets/images/dclexplorer-web-image-1.png"
+import { DclExplorerImage } from "./components/DclExplorerImage"
 
 
 
@@ -61,20 +63,40 @@ export const App = () => {
           </Box>
         </Box>
       
-        <Box >
-          <Image margin={'auto'} my={"3rem"} src='gibbresh.png' fallbackSrc='https://via.placeholder.com/850x350' />
-          <Text>After the goals achieved in the Protocol Squad we continue contributing to the Decentraland metaverse through the development of mobile clients with the Godot engine, oriented to Android and iOS platforms, with potential publication in App Store and Play Store and through the continuation of the development of the desktop client of the Bevy engine.</Text>
+        <Box>
+          <Box mb="1rem" display={'flex'} alignItems={'center'}>
+            <DclExplorerImage aspectRatio={2.4} w="100%"/>
+          </Box>
+          <Text>After the goals achieved in the Protocol Squad we continue contributing to the Decentraland ecosystem through the development of mobile clients with the Godot engine, oriented to Android and iOS platforms, with potential publication in App Store and Play Store and through the continuation of the development of the desktop client of the Bevy engine.</Text>
           <Text>On the other hand, we contributed to the Decentraland documentation by working in collaboration with the Foundation. </Text>
           <Text>For more info, you can see the{' '}
             <Link
-            
-              href="https://dao.decentraland.org/"
+              href="https://decentraland.org/governance/proposal/?id=cb04d870-5ff6-11ee-af3f-d9f6b00b3bf3"
               target="_blank"
               rel="noopener noreferrer"
               color={"#ff2d55"}>
               proposal
             </Link>
             .
+          </Text>
+          <Text mt="1rem">Try our explorers (Alpha stage):</Text>
+          <Text>
+            <Link
+              href="https://github.com/decentraland/bevy-explorer/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              color={"#ff2d55"}>
+              Bevy - Only Desktop
+            </Link>
+          </Text>
+          <Text>
+            <Link
+                href="https://github.com/decentraland/godot-explorer/releases"
+                target="_blank"
+                rel="noopener noreferrer"
+                color={"#ff2d55"}>
+                Godot - Desktop and Mobile
+            </Link>
           </Text>
         </Box>
       </Box>

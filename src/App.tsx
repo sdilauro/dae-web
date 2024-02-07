@@ -96,6 +96,10 @@ export const App = () => {
                 Godot - Desktop and Mobile
             </Link>
           </Text>
+          
+          <Text align={"right"}>
+            Powered by Decentraland DAO
+          </Text>
         </Box>
       </Box>
       <Box h={'8rem'} w={'100%'} />

@@ -22,7 +22,7 @@ type FooterProps = {isMobile: boolean}
               {props.isMobile ? '' : <Text mr={'1rem'}>Godot Explorer</Text>}
               <GodotIcon h={'1.5rem'} />
           </Link>
-          <Link m={"1rem"} display={'flex'} alignItems={'center'} href="https://discord.com/channels/894658869391933540/1058482438445215774" target='_blank'>
+          <Link m={"1rem"} display={'flex'} alignItems={'center'} href="https://discord.gg/6mGqPnjujT" target='_blank'>
               {props.isMobile ? '' : <Text mr={'1rem'}>DAO Discord Channel</Text>}
               <FaDiscord size={'1.5rem'} />
           </Link>

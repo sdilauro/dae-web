@@ -10,6 +10,11 @@ const container = document.getElementById("root")
 if (!container) throw new Error('Failed to find the root element');
 const root = ReactDOM.createRoot(container)
 
+// TODO: hardcoded
+if (window.location.pathname === '/discord') {
+  window.location.href = 'https://discord.gg/6mGqPnjujT'
+}
+
 root.render(
   <React.StrictMode>
     <ColorModeScript />

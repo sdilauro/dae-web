@@ -43,7 +43,7 @@ import {
     return (
       <>
         <Box width={"100%"} justifyContent={"end"} display={'flex'} paddingX={5}>
-          <ColorModeSwitcher toggleColorMode={toggleColorMode} justifySelf="flex-end" />
+          <ColorModeSwitcher justifySelf="flex-end" />
         </Box>
         <Box fontFamily={"monospace"} textAlign="left" fontSize="lg" width={isMobile?"90%":"50%"} margin={'auto'}>
           <Box display={"flex"} flexDirection={isMobile ? 'column-reverse' : 'row'} alignContent={""} alignItems={"center"} mb={"1rem"} w={"100%"} justifyContent={isMobile?"revert":"space-between"}>

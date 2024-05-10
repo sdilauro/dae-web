@@ -6,7 +6,6 @@ import {
     ListItem,
     OrderedList,
     Text,
-    useColorMode,
     useColorModeValue
   } from "@chakra-ui/react"
   import { useEffect, useState } from "react"
@@ -21,10 +20,7 @@ import {
   import LinuxIcon from "./../components/LinuxIcon"
   
   
-  
-  
   export const HomePage = () => {
-    const { toggleColorMode } = useColorMode()
     const iconColor = useColorModeValue('#444', '#FFF')
     const [width, setWidth] = useState<number>(window.innerWidth);
   

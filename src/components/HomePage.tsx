@@ -45,7 +45,7 @@ import {
           <Box display={"flex"} flexDirection={isMobile ? 'column-reverse' : 'row'} alignContent={""} alignItems={"center"} mb={"1rem"} w={"100%"} justifyContent={isMobile?"revert":"space-between"}>
             <Box>
               <Heading color={"#ff2d55"} fontFamily={"monospace"} textAlign={'left'}>Decentraland DAO Explorers</Heading>
-              <Text textAlign={'left'}>Building an alternative to play Decentraland in Mobile, VR and Desktop</Text>
+              <Text textAlign={'left'}>Building an alternative to play Decentraland on Mobile, VR, and Desktop</Text>
             </Box>
             <Box display={"flex"} alignItems={"center"} marginLeft={isMobile?'0':'1rem'} marginBottom={isMobile?'1.5rem':'0'} minW={136}>
               <Link
@@ -69,7 +69,7 @@ import {
             <Box mb="1rem" display={'flex'} alignItems={'center'}>
               <DclExplorerImage aspectRatio={1.6466} w="100%"/>
             </Box>
-            <Text mt="1rem">If you want to try our Explorers, follow the instruction in section:</Text>
+            <Text mt="1rem">If you want to try our Explorers, follow the instructions in the proper section:</Text>
   
             <Box display={'flex'} flexDirection='row' alignItems={'center'}  mt="1rem" mb="1rem">
               <Box mr={'1rem'}>
@@ -80,7 +80,7 @@ import {
               </Box>
             </Box>
             <OrderedList>
-              <ListItem>Only need to go to <Link
+              <ListItem>You only need to go to <Link
                 href="https://play.google.com/store/apps/details?id=org.decentraland.godotexplorer"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,14 +101,14 @@ import {
             </Box>
             
             <OrderedList>
-              <ListItem>Only need to go to <Link
+              <ListItem>You only need to go to <Link
                 href="https://testflight.apple.com/join/KF4r3jlU"
                 target="_blank"
                 rel="noopener noreferrer"
                 color={"#ff2d55"}>
                 DCL Explorer beta - TestFlight
-              </Link> and click on Download!</ListItem>
-              <ListItem>If you don't have TestFlight, first download <b>TestFlight</b> and then enter the link again</ListItem>
+              </Link> and click on Download</ListItem>
+              <ListItem>If you don't have <b>TestFlight</b>, first download it and then enter the link again</ListItem>
             </OrderedList>
             <Text mt="1rem">Note: This is a public testing</Text>
   
@@ -135,22 +135,22 @@ import {
                 color={"#ff2d55"}>
                 Bevy - Releases page
               </Link></ListItem>
-              <ListItem>Select the option which fits with your current platform (Windows, MacOS, or Linux). Note: if you're using Macs newer than 2019, M1M2 is your option.</ListItem>
+              <ListItem>Select the option that fits your current platform (Windows, MacOS, or  Linux). Note that if you're using Macs newer than 2019, M1M2 is your option.</ListItem>
               <ListItem>Download the option selected and extract the package wherever you want</ListItem>
-              <ListItem>Execute by double-clicking the file `decentra-bevy` or `decentra-bevy.exe`</ListItem>
-              <ListItem>(Windows) For now, when appearing a dialog of security risk, you need to click "More info" and then "Run anyway"</ListItem>
-              <ListItem>(MacOS) For now, you need to make an exception of executing this binary. To do that, make sure you have opened Securiy&Privacy settings, then try to run the executable. A message will apear with a button "Allow anyway", click it and then try to open the executable again.</ListItem>
+              <ListItem>Execute by double-clicking the file <b>decentra-bevy</b> or <b>decentra-bevy.exe</b></ListItem>
+              <ListItem>(Windows) For now, when appearing a dialog about security risk, you need to click "More info" and then "Run anyway"</ListItem>
+              <ListItem>(MacOS)  For now, you need to make an exception to execute this binary. To do that, ensure you have opened the Securiy&Privacy settings and try to run the executable. A message will appear with the button "Allow anyway." Click it, and then try to open the executable again.</ListItem>
             </OrderedList>
   
             <Divider mt="1rem" mb="1rem" />
             
-            <Text mt="2xl">Do you have any trouble or feedback? Please visit <Link
+            <Text mt="2xl">Do you need any help or have some feedback? Please visit <Link
                 href="https://discord.gg/6mGqPnjujT"
                 target="_blank"
                 rel="noopener noreferrer"
                 color={"#ff2d55"}>
-                Discord server
-              </Link>, we'd glad to have you there and talk.</Text>
+                our Discord server
+              </Link>; we'd be glad to have you there and talk.</Text>
 
           </Box>
           <Box display={'flex'} justifyContent={'flex-end'} alignItems={'flex-end'} h={'3rem'} w={'100%'}> 

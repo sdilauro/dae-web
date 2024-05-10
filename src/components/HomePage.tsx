@@ -18,6 +18,7 @@ import {
   import MacOSIcon from "./../components/MacOSIcon"
   import WindowsIcon from "./../components/WindowsIcon"
   import LinuxIcon from "./../components/LinuxIcon"
+import VRIcon from "./VRIcon"
   
   
   export const HomePage = () => {
@@ -141,7 +142,26 @@ import {
               <ListItem>(Windows) For now, when appearing a dialog about security risk, you need to click "More info" and then "Run anyway"</ListItem>
               <ListItem>(MacOS)  For now, you need to make an exception to execute this binary. To do that, ensure you have opened the Securiy&Privacy settings and try to run the executable. A message will appear with the button "Allow anyway." Click it, and then try to open the executable again.</ListItem>
             </OrderedList>
-  
+            <Divider mt="1rem" mb="1rem" />
+            
+            <Box display={'flex'} flexDirection='row' alignItems={'center'}  mt="1rem" mb="1rem">
+              <Box mr={'1rem'}>
+                <Text fontSize="3xl">VR</Text>
+              </Box>
+              <Box mr={'1rem'}>
+                <VRIcon size={48} color={iconColor} />
+              </Box>
+            </Box>
+            <Text>We plan to have a public link to test it in late August (2024). For now, we have a <Link
+                href="https://www.youtube.com/watch?v=WlpDF1z4s9I&list=PLBmhkGNdurqgEZ0JlaDew3Gdk-3xElgu7&index=12"
+                target="_blank"
+                rel="noopener noreferrer"
+                color={"#ff2d55"}>
+                demonstration video
+              </Link>.
+            </Text>
+
+
             <Divider mt="1rem" mb="1rem" />
             
             <Text mt="2xl">Do you need any help or have some feedback? Please visit <Link
@@ -150,8 +170,8 @@ import {
                 rel="noopener noreferrer"
                 color={"#ff2d55"}>
                 our Discord server
-              </Link>; we'd be glad to have you there and talk.</Text>
-
+              </Link>; we'd be glad to have you there and talk.
+            </Text>
           </Box>
           <Box display={'flex'} justifyContent={'flex-end'} alignItems={'flex-end'} h={'3rem'} w={'100%'}> 
             <Text align={"right"}>

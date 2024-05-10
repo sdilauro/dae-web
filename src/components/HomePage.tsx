@@ -129,13 +129,12 @@ import {
             </Box>
             <OrderedList>
               <ListItem>Go to <Link
-                href="https://github.com/decentraland/bevy-explorer/releases"
+                href="https://github.com/decentraland/bevy-explorer/releases/latest"
                 target="_blank"
                 rel="noopener noreferrer"
                 color={"#ff2d55"}>
                 Bevy - Releases page
               </Link></ListItem>
-              <ListItem>Choose the latest release and expand the <b>Assets</b> options</ListItem>
               <ListItem>Select the option which fits with your current platform (Windows, MacOS, or Linux). Note: if you're using Macs newer than 2019, M1M2 is your option.</ListItem>
               <ListItem>Download the option selected and extract the package wherever you want</ListItem>
               <ListItem>Execute by double-clicking the file `decentra-bevy` or `decentra-bevy.exe`</ListItem>

@@ -45,17 +45,10 @@ import VRIcon from "./VRIcon"
         <Box fontFamily={"monospace"} textAlign="left" fontSize="lg" width={isMobile?"90%":"50%"} margin={'auto'}>
           <Box display={"flex"} flexDirection={isMobile ? 'column-reverse' : 'row'} alignContent={""} alignItems={"center"} mb={"1rem"} w={"100%"} justifyContent={isMobile?"revert":"space-between"}>
             <Box>
-              <Heading color={"#ff2d55"} fontFamily={"monospace"} textAlign={'left'}>Decentraland DAO Explorers</Heading>
+              <Heading color={"#ff2d55"} fontFamily={"monospace"} textAlign={'left'}>DecentralandDAO Explorers</Heading>
               <Text textAlign={'left'}>Building an alternative to play Decentraland on Mobile, VR, and Desktop</Text>
             </Box>
-            <Box display={"flex"} alignItems={"center"} marginLeft={isMobile?'0':'1rem'} marginBottom={isMobile?'1.5rem':'0'} minW={136}>
-              <Link
-                href="https://decentraland.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FoundationIcon h="60px" aspectRatio={1} />
-              </Link>
+            <Box display={"flex"} alignItems={"center"} marginLeft={isMobile?'0':'1rem'} marginBottom={isMobile?'1.5rem':'0'} minW={136/2}>
               <Link
                 href="https://dao.decentraland.org/"
                 target="_blank"
@@ -175,7 +168,7 @@ import VRIcon from "./VRIcon"
           </Box>
           <Box display={'flex'} justifyContent={'flex-end'} alignItems={'flex-end'} h={'3rem'} w={'100%'}> 
             <Text align={"right"}>
-              Powered by Decentraland DAO
+              Powered by DecentralandDAO
             </Text>
           </Box>
           <Box h={'5rem'} w={'100%'} />

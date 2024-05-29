@@ -13,7 +13,6 @@ import {
   import { DaoIcon } from "./../components/DaoIcon"
   import { DclExplorerImage } from "./../components/DclExplorerImage"
   import { Footer } from "./../components/Footer"
-  import { FoundationIcon } from "./../components/FoundationIcon"
   import AndroidIcon from "./../components/AndroidIcon"
   import MacOSIcon from "./../components/MacOSIcon"
   import WindowsIcon from "./../components/WindowsIcon"

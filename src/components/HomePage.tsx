@@ -1,28 +1,45 @@
 import {
-    Box,
-    Divider,
-    Heading,
-    Link,
-    ListItem,
-    OrderedList,
-    Text,
-    useColorModeValue
-  } from "@chakra-ui/react"
-  import { useEffect, useState } from "react"
-  import { ColorModeSwitcher } from "./../ColorModeSwitcher"
-  import { DaoIcon } from "./../components/DaoIcon"
-  import { DclExplorerImage } from "./../components/DclExplorerImage"
-  import { Footer } from "./../components/Footer"
-  import AndroidIcon from "./../components/AndroidIcon"
-  import MacOSIcon from "./../components/MacOSIcon"
-  import WindowsIcon from "./../components/WindowsIcon"
-  import LinuxIcon from "./../components/LinuxIcon"
+  Box,
+  Divider,
+  Heading,
+  Link,
+  ListItem,
+  OrderedList,
+  Text,
+  useColorModeValue,
+  Image,
+} from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { ColorModeSwitcher } from "./../ColorModeSwitcher"
+import AndroidIcon from "./../components/AndroidIcon"
+import { DaoIcon } from "./../components/DaoIcon"
+import { DclExplorerImage } from "./../components/DclExplorerImage"
+import { Footer } from "./../components/Footer"
+import LinuxIcon from "./../components/LinuxIcon"
+import MacOSIcon from "./../components/MacOSIcon"
+import WindowsIcon from "./../components/WindowsIcon"
 import VRIcon from "./VRIcon"
+import bevyWindowsSmartScreenGif from "../assets/images/bevy-smart-screen.gif"
+
+type DesktopPlatform = 'windows' | 'linux' | 'macos' 
+
+function getCurrentPlatform(): DesktopPlatform {
+  if (navigator?.userAgent) {
+    const userAgent = navigator.userAgent.toLowerCase()
+
+    if (userAgent.includes('mac')) {
+      return 'macos'
+    } else if (userAgent.includes('linux')) {
+      return 'linux'
+    }
+  }
+  return 'windows'
+}
   
-  
-  export const HomePage = () => {
+export const HomePage = () => {
     const iconColor = useColorModeValue('#444', '#FFF')
     const [width, setWidth] = useState<number>(window.innerWidth);
+    const [selectedPlaftorm, setSelectedPlatform] = useState<DesktopPlatform>(getCurrentPlatform());
   
     function handleWindowSizeChange() {
       setWidth(window.innerWidth);
@@ -81,7 +98,6 @@ import VRIcon from "./VRIcon"
                 Decentraland - PlayStore
               </Link> and click on Install</ListItem>
             </OrderedList>
-            <Text mt="1rem">Note: This is a public testing</Text>
   
             <Divider mt="1rem" mb="1rem" />
             <Box display={'flex'} flexDirection='row' alignItems={'center'}  mt="1rem" mb="1rem">
@@ -108,15 +124,17 @@ import VRIcon from "./VRIcon"
             <Divider mt="1rem" mb="1rem" />
             <Box display={'flex'} flexDirection='row' alignItems={'center'}  mt="1rem" mb="1rem">
               <Box mr={'1rem'}>
-                <Text fontSize="3xl">Desktop</Text>
+                <Text fontSize="3xl">Desktop: Choose your OS</Text>
               </Box>
-              <Box mr={'1rem'}>
+            </Box>
+            <Box display={'flex'} flexDirection='row' alignItems={'center'} justifyContent={'center'}  mt="1rem" mb="1rem">
+              <Box mr={'4rem'} onClick={() => setSelectedPlatform('windows') } opacity={selectedPlaftorm === 'windows' ? 1.0: 0.5} cursor={'pointer'}>
                 <WindowsIcon size={48} color={iconColor} />
               </Box>
-              <Box mr={'1rem'}>
+              <Box mr={'4rem'} onClick={() => setSelectedPlatform('macos') } opacity={selectedPlaftorm === 'macos' ? 1.0: 0.5} cursor={'pointer'}>
                 <MacOSIcon size={48} color={iconColor} />
               </Box>
-              <Box mr={'1rem'}>
+              <Box mr={'4rem'} onClick={() => setSelectedPlatform('linux') } opacity={selectedPlaftorm === 'linux' ? 1.0: 0.5} cursor={'pointer'}>
                 <LinuxIcon size={48} color={iconColor} />
               </Box>
             </Box>
@@ -128,11 +146,35 @@ import VRIcon from "./VRIcon"
                 color={"#ff2d55"}>
                 Bevy - Releases page
               </Link></ListItem>
-              <ListItem>Select the option that fits your current platform (Windows, MacOS, or  Linux). Note that if you're using Macs newer than 2019, M1M2 is your option.</ListItem>
-              <ListItem>Download the option selected and extract the package wherever you want</ListItem>
-              <ListItem>Execute by double-clicking the file <b>decentra-bevy</b> or <b>decentra-bevy.exe</b></ListItem>
-              <ListItem>(Windows) For now, when appearing a dialog about security risk, you need to click "More info" and then "Run anyway"</ListItem>
-              <ListItem>(MacOS)  For now, you need to make an exception to execute this binary. To do that, ensure you have opened the Securiy&Privacy settings and try to run the executable. A message will appear with the button "Allow anyway." Click it, and then try to open the executable again.</ListItem>
+              { 
+                selectedPlaftorm === 'linux' && 
+                <>
+                  <ListItem>Click to download the option with the next format <b>bevy-explorer-202X-MM-DD-HH-mm-SS-linux-x86_64.tar.gz</b></ListItem>
+                  <ListItem>Extract the file by right-clicking the file and selecting <b>Extract</b>, or run the command <b>tar –xvzf file_name.tar.gz</b></ListItem>
+                  <ListItem>Execute by double-clicking the file <b>decentra-bevy</b> or running the command <b>./decentra-bevy</b></ListItem>
+                  <ListItem>Note: you may grant executable permission to the file, run <b>chmod +x decentra-bevy</b>.</ListItem>
+                </>
+              }
+              { 
+                selectedPlaftorm === 'windows' && 
+                <>
+                  <ListItem>Click to download the option with the next format <b>bevy-explorer-202X-MM-DD-HH-mm-SS-windows-x86_64.zip</b></ListItem>
+                  <ListItem>Extract the file by right-clicking the file and selecting <b>Extract</b></ListItem>
+                  <ListItem>Execute by double-clicking the file <b>decentra-bevy.exe</b></ListItem>
+                  <ListItem>For now you may see the smart protect blue dialog.</ListItem>
+                  <Box>
+                    <Image src={bevyWindowsSmartScreenGif} />
+                  </Box>
+                </>
+              }
+              { 
+                selectedPlaftorm === 'macos' && 
+                <>
+                  <ListItem>Click to download the option with the next format <b>bevy-explorer-202X-MM-DD-HH-mm-SS-macos-m1m2.zip</b></ListItem>
+                  <ListItem>You'll find the <b>DecentralandBevyExplorer.app</b> file, you can open by double-clicking it</ListItem>
+                  <ListItem>Note: (For now) Support is not available for desktop devices older than 2020 running on Apple Intel systems.</ListItem>
+                </>
+              }
             </OrderedList>
             <Divider mt="1rem" mb="1rem" />
             
